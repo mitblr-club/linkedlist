@@ -43,9 +43,11 @@ export default function Home() {
     </div>
     <div className="flex flex-col w-full items-center justify-center gap-4 p-4">
       {links.map((item, index) => (
-        <Link key={index} href={item.href} target="_blank">
-          <Button className="px-12 py-4 min-w-full min-h-14 lg:min-w-[30rem] lg:min-h-[4rem] bg-transparent border-2 border-white text-2xl font-mono justify-between rounded-none hover:bg-white hover:text-green-600">{item.icon} {item.name}</Button>
-        </Link>
+          <Button asChild key={index} className="px-12 py-4 text-2xl font-mono">
+            <Link href={item.href} target="_blank" className="flex flex-row justify-between min-w-full min-h-14 lg:min-w-[30rem] lg:min-h-[4rem] bg-transparent border-2 border-white rounded-none hover:bg-white hover:text-green-600">
+              {item.icon} {item.name}
+            </Link>
+          </Button>
       ))}
     </div>
   </main>
