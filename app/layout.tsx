@@ -16,9 +16,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.png',
   },
 };
 
@@ -27,7 +25,7 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
-}
+};
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -46,7 +44,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="px-10 flex-1 bg-gradient-to-b from-green-600 to-green-900">{children}</div>
+            <div className="flex-1 bg-gradient-to-b from-green-600 to-green-900 px-10">
+              {children}
+            </div>
           </ThemeProvider>
         </body>
       </html>
