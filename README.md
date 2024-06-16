@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# mitblr.club 'linkedlist'
 
-## Getting Started
+![Release](https://img.shields.io/github/v/release/mitblr-club/linkedlist)
+![Forks](https://img.shields.io/github/forks/mitblr-club/linkedlist?style=flat)
 
-First, run the development server:
+This template is a fully responsive website built with [Next.JS](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Configuration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1.  All core config. values of the template exist in the root at [`site.config.ts`](/site.config.ts).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    ```ts
+    export const siteConfig = {
+      name: '...',
+      institution: '...',
+      description: '...',
+    };
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2.  The list of links is located at [`app/data.tsx`](/app/data.tsx), with icons from [`lucide-react`](https://lucide.dev/icons/) that you can choose as per your requirements.
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+1. To install packages, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   You can then make changes as necessary in order to be committed.
 
-## Deploy on Vercel
+2. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Format changes using Prettier.
+
+   ```bash
+   # Formatting
+   npm run format:write
+   ```
+
+Now, you can create a pull request to commit changes to the repository.
